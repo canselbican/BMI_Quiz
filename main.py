@@ -34,3 +34,26 @@ hesaplama_button.pack()
 
 sonuç_label=tkinter.Label()
 sonuç_label.pack()
+
+def write_sonuç(bmi):
+   sonuç_string = f"vücut kitle indeksiniz {round(bmi, 2)}. "
+   if bmi <= 16:
+      sonuç_string += "son derece zayıfsınız!"
+   elif 16 < bmi <= 17:
+      sonuç_string += "orta derecede zayıfsınız!"
+   elif 17 < bmi <= 18.5:
+      sonuç_string += "hafif zayıfsınız!"
+   elif 18.5 < bmi <= 25:
+      sonuç_string += "normal kilodasınız"
+   elif 25 < bmi <= 30:
+      sonuç_string += "kilolusunuz"
+   elif 30 < bmi <= 35:
+      sonuç_string += "1.derece obezsiniz"
+   elif 35 < bmi <= 40:
+      sonuç_string += "2.derece obezsiniz"
+   else:
+      sonuç_string += "3.derece obezsiniz"
+   return sonuç_string
+
+
+window.mainloop()
